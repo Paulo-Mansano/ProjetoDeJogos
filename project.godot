@@ -21,11 +21,11 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=360
+window/size/viewport_width=426
 window/size/viewport_height=240
-window/size/window_width_override=2880
-window/size/window_height_override=1920
-window/stretch/mode="canvas_items"
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
 
 [layer_names]
 
