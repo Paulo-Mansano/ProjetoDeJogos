@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvyuq31617vq"
-path="res://.godot/imported/cherry.png-7ab4414c3205a261c4f589aa0468376a.ctex"
+uid="uid://dpwya2qkbeybv"
+path="res://.godot/imported/Tela inicial jogo puzzle.png-d5926f7d391e5bbdea711e0c06bf2a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pickups/Cheery/cherry.png"
-dest_files=["res://.godot/imported/cherry.png-7ab4414c3205a261c4f589aa0468376a.ctex"]
+source_file="res://telainicial/Tela inicial jogo puzzle.png"
+dest_files=["res://.godot/imported/Tela inicial jogo puzzle.png-d5926f7d391e5bbdea711e0c06bf2a0a.ctex"]
 
 [params]
 
