@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvyuq31617vq"
-path="res://.godot/imported/cherry.png-7ab4414c3205a261c4f589aa0468376a.ctex"
+uid="uid://b4qd7jfq0l6ob"
+path="res://.godot/imported/Capa.svg-9b06a7c5eb521258e4f1426304d34f7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pickups/Cheery/cherry.png"
-dest_files=["res://.godot/imported/cherry.png-7ab4414c3205a261c4f589aa0468376a.ctex"]
+source_file="res://Capa.svg"
+dest_files=["res://.godot/imported/Capa.svg-9b06a7c5eb521258e4f1426304d34f7b.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

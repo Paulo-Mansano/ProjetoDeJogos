@@ -14,10 +14,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="SunnyLand"
-run/main_scene="res://World/world.tscn"
+config/name="Avalanche"
+run/main_scene="uid://0n8tfusaiur2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://b4qd7jfq0l6ob"
 
 [display]
 

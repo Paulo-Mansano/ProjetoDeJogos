@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rwnewwkgqglm"
-path="res://.godot/imported/gem.png-4e0b6b2a30bf103f478eb9aad856bd70.ctex"
+uid="uid://8ypi05bjhbti"
+path="res://.godot/imported/Tela_inicial_jogo_puzzle.png-716f0ff4def8572760f05cf51ef00dc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pickups/Gem/gem.png"
-dest_files=["res://.godot/imported/gem.png-4e0b6b2a30bf103f478eb9aad856bd70.ctex"]
+source_file="res://telainicial/Tela_inicial_jogo_puzzle.png"
+dest_files=["res://.godot/imported/Tela_inicial_jogo_puzzle.png-716f0ff4def8572760f05cf51ef00dc8.ctex"]
 
 [params]
 
