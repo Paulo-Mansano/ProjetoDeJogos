@@ -10,25 +10,44 @@ const ICE_SPEED = 250.0 # Limite maior exclusivo para o gelo
 @export var slideValue = 0.01
 @export var fullStopValue = 15
 
+# --- COYOTE JUMP ---
+@export var coyote_time: float = 0.12
+var coyote_timer: float = 0.0
+
 # --- REFERÊNCIAS DE NÓS ---
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var floor_ray_cast = $floorRayCast
+@onready var floor_ray_cast_2 = $floorRayCast2
+@onready var floor_ray_cast_3 = $floorRayCast3
 
 # --- SISTEMA ---
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var jumped_from_ice = false # Memória para manter o embalo no ar
+var jumped_from_ice: bool = false
+var _frames_on_non_ice: int = 999
 
 func _physics_process(delta):
-	# 1. Gravidade e Memória do Chão
+	# 1. Gravidade
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	else:
-		# Salva se o jogador pisou no gelo antes de pular
-		jumped_from_ice = _is_on_ice()
 
-	# 2. Pulo
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# 2. Coyote timer + memória do gelo
+	if is_on_floor():
+		coyote_timer = coyote_time
+		if _is_on_ice():
+			_frames_on_non_ice = 0
+			jumped_from_ice = true
+		else:
+			_frames_on_non_ice = min(_frames_on_non_ice + 1, 999)
+			if _frames_on_non_ice >= 4:
+				jumped_from_ice = false
+	else:
+		_frames_on_non_ice = 0
+		coyote_timer = max(coyote_timer - delta, 0.0)
+
+	# 3. Pulo (com coyote)
+	if Input.is_action_just_pressed("ui_accept") and coyote_timer > 0:
 		velocity.y = JUMP_VELOCITY
+		coyote_timer = 0.0
 
 	# 3. Direção do Input (-1, 0 ou 1)
 	var input_axis = Input.get_axis("ui_left", "ui_right")
@@ -75,7 +94,7 @@ func _movement_on_ice(direction):
 	else:
 		# Desliza até parar
 		velocity.x = lerp(velocity.x, 0.0, slideValue)
-		if abs(velocity.x) < fullStopValue: 
+		if abs(velocity.x) < fullStopValue:
 			velocity.x = 0
 
 func _air_ice_movement(direction):
@@ -108,11 +127,9 @@ func update_animations(input_axis):
 		animated_sprite_2d.play("jump")
 
 func _is_on_ice():
-	if not floor_ray_cast.is_colliding():
-		return false
-		
-	var collider = floor_ray_cast.get_collider()
-	if not collider: return false
-	
-	# Nome exato do TileMap de gelo
-	return collider.name == "iceBlocks"
+	for ray in [floor_ray_cast, floor_ray_cast_2, floor_ray_cast_3]:
+		if ray.is_colliding():
+			var collider = ray.get_collider()
+			if collider and collider.name == "iceBlocks":
+				return true
+	return false
