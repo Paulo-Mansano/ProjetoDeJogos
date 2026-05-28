@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://743e1aame7em"
-path="res://.godot/imported/noz.png-b7d94bc1c64caef63f6018322355e348.ctex"
+uid="uid://rwnewwkgqglm"
+path="res://.godot/imported/gem.png-4e0b6b2a30bf103f478eb9aad856bd70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pickups/Noz/noz.png"
-dest_files=["res://.godot/imported/noz.png-b7d94bc1c64caef63f6018322355e348.ctex"]
+source_file="res://Pickups/Gem/gem.png"
+dest_files=["res://.godot/imported/gem.png-4e0b6b2a30bf103f478eb9aad856bd70.ctex"]
 
 [params]
 
