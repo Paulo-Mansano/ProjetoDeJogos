@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://cpkp0go2fi2jg"]
+
+[ext_resource type="Script" uid="uid://cdeeop485115q" path="res://telainicial/tela_selecao.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.87, 0.27, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+bg_color = Color(0.65, 0.18, 0.05, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(1, 0.35, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_focus"]
+bg_color = Color(0.87, 0.27, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_voltar"]
+bg_color = Color(0.2, 0.2, 0.2, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="TelaSelecao" type="Control" unique_id=378124004]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=415976893]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+stretch_mode = 2
+
+[node name="Titulo" type="Label" parent="." unique_id=1014236586]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.063, 0.133, 0.533, 0.75)
+theme_override_colors/font_outline_color = Color(0.063, 0.133, 0.533, 0.9)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 38
+text = "AVALANCHE"
+horizontal_alignment = 1
+text_overrun_behavior = 5
+
+[node name="ButtonTutorial" type="Button" parent="." unique_id=1709763283]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -99.0
+offset_right = 39.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
+text = "TUTORIAL"
+
+[node name="ButtonFase1" type="Button" parent="." unique_id=360469606]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -75.0
+offset_right = 40.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
+text = "FASE 1"
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=104820721]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -22.0
+offset_right = 40.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_voltar")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
+text = "< voltar"
+
+[connection signal="pressed" from="ButtonTutorial" to="." method="_on_button_tutorial_pressed"]
+[connection signal="pressed" from="ButtonFase1" to="." method="_on_button_fase1_pressed"]
+[connection signal="pressed" from="ButtonVoltar" to="." method="_on_button_voltar_pressed"]
