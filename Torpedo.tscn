@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cxrse4o7w4vam"]
+
+[ext_resource type="Script" uid="uid://b0ctimc0g8hjb" path="res://torpedo.gd" id="1_fas1h"]
+[ext_resource type="Texture2D" uid="uid://cei75a3r30krh" path="res://icon.svg" id="2_t2myi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_in254"]
+radius = 3.0
+
+[node name="Torpedo" type="Area2D" unique_id=1028713501]
+script = ExtResource("1_fas1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660647403]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_t2myi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483167469]
+shape = SubResource("CircleShape2D_in254")
