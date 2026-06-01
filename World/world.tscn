@@ -9,6 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
 [ext_resource type="Texture2D" uid="uid://b584guu0048qd" path="res://World/Props/door.png" id="17_06f2i"]
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_w47uh"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_lo5ox"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_h2aik"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_0wqet"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_awrha"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8m4"]
@@ -19,6 +24,120 @@ texture_filter = 1
 texture_repeat = 1
 
 [node name="ParallaxBackground" parent="." unique_id=1417930058 instance=ExtResource("1_2dejq")]
+
+[node name="SkyLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=130341542]
+motion_scale = Vector2(0, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/SkyLayer" unique_id=1289217658]
+position = Vector2(-514, -12)
+scale = Vector2(3, 1.5)
+texture = ExtResource("2_w47uh")
+centered = false
+
+[node name="BgLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=898917011]
+motion_scale = Vector2(0.15, 0)
+
+[node name="BG" type="Sprite2D" parent="ParallaxBackground/BgLayer" unique_id=1653484998]
+position = Vector2(0, -35)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_lo5ox")
+centered = false
+
+[node name="BG2" type="Sprite2D" parent="ParallaxBackground/BgLayer" unique_id=637112027]
+position = Vector2(670, -35)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_lo5ox")
+centered = false
+
+[node name="BG3" type="Sprite2D" parent="ParallaxBackground/BgLayer" unique_id=824352370]
+position = Vector2(1340, -35)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_lo5ox")
+centered = false
+
+[node name="MiddleLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1730835937]
+motion_scale = Vector2(0.35, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=1041145759]
+position = Vector2(0, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_h2aik")
+centered = false
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=43492678]
+position = Vector2(576, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_h2aik")
+centered = false
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=739682610]
+position = Vector2(1152, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_h2aik")
+centered = false
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=1662066783]
+position = Vector2(1728, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_h2aik")
+centered = false
+
+[node name="SnowLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=160420501]
+
+[node name="Snow" type="Sprite2D" parent="ParallaxBackground/SnowLayer" unique_id=1509002630]
+scale = Vector2(0.28958333, 0.22314812)
+texture = ExtResource("5_0wqet")
+centered = false
+
+[node name="Snow2" type="Sprite2D" parent="ParallaxBackground/SnowLayer" unique_id=1949684194]
+position = Vector2(550, 0)
+scale = Vector2(0.28958333, 0.22314812)
+texture = ExtResource("5_0wqet")
+centered = false
+
+[node name="Snow3" type="Sprite2D" parent="ParallaxBackground/SnowLayer" unique_id=1849790580]
+position = Vector2(1100, 0)
+scale = Vector2(0.28958333, 0.22314812)
+texture = ExtResource("5_0wqet")
+centered = false
+
+[node name="Snow4" type="Sprite2D" parent="ParallaxBackground/SnowLayer" unique_id=1339602335]
+position = Vector2(1650, 0)
+scale = Vector2(0.28958333, 0.22314812)
+texture = ExtResource("5_0wqet")
+centered = false
+
+[node name="FGLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1926517882]
+
+[node name="FG" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=569621675]
+position = Vector2(0, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_awrha")
+centered = false
+
+[node name="FG2" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=1185093974]
+position = Vector2(513, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_awrha")
+centered = false
+
+[node name="FG3" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=248808741]
+position = Vector2(1026, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_awrha")
+centered = false
+
+[node name="FG4" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=456919869]
+position = Vector2(1539, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_awrha")
+centered = false
+
+[node name="FG5" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=862628061]
+position = Vector2(2052, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_awrha")
+centered = false
 
 [node name="Props" type="Node2D" parent="." unique_id=1523099226]
 
