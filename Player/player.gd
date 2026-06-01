@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@export var torpedo_scene: PackedScene
+@onready var aim_line = $AimLine
+
 # --- VARIÁVEIS DE VELOCIDADE ---
 const SPEED = 110.0
 const JUMP_VELOCITY = -300.0
@@ -136,3 +139,26 @@ func _is_on_ice():
 			if collider and collider.name == "iceBlocks":
 				return true
 	return false
+
+# --- TORPEDO ---
+
+func _process(_delta):
+	var direction = (get_global_mouse_position() - global_position).normalized()
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		aim_line.visible = true
+		aim_line.points = [Vector2.ZERO, direction * 100]
+	else:
+		aim_line.visible = false
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			shoot_torpedo()
+
+func shoot_torpedo():
+	if torpedo_scene == null:
+		return
+	var torpedo = torpedo_scene.instantiate()
+	get_parent().add_child(torpedo)
+	torpedo.global_position = global_position
+	torpedo.direction = (get_global_mouse_position() - global_position).normalized()
