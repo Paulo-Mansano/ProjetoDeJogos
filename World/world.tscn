@@ -10,18 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_awrha"]
 [ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="10_dygeg"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="10_w47uh"]
-[ext_resource type="Texture2D" uid="uid://co6iaq15epner" path="res://World/Props/skulls.png" id="11_bm1l4"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
-[ext_resource type="Texture2D" uid="uid://b584guu0048qd" path="res://World/Props/door.png" id="17_06f2i"]
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 [ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="30_crate"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8m4"]
-size = Vector2(50, 238)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brk"]
 size = Vector2(16, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8m4"]
+size = Vector2(50, 238)
 
 [node name="World" type="Node2D" unique_id=1434655207]
 texture_filter = 1
@@ -168,33 +166,21 @@ texture_repeat = 1
 [node name="Sign" type="Sprite2D" parent="PropsFront" unique_id=1829403842]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(182, 183)
+position = Vector2(180, 177)
+scale = Vector2(0.055907164, 0.057984676)
 texture = ExtResource("10_dygeg")
 
-[node name="Sign2" type="Sprite2D" parent="PropsFront" unique_id=1523584244]
-position = Vector2(294, 183)
+[node name="Sign2" type="Sprite2D" parent="PropsFront" unique_id=695544255]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(404, 177)
+scale = Vector2(0.055907164, 0.057984676)
 texture = ExtResource("10_dygeg")
-
-[node name="Sign3" type="Sprite2D" parent="PropsFront" unique_id=133391831]
-position = Vector2(1091, 183)
-texture = ExtResource("10_dygeg")
-
-[node name="Skulls" type="Sprite2D" parent="PropsFront" unique_id=190932998]
-position = Vector2(1796, 171)
-texture = ExtResource("11_bm1l4")
 
 [node name="Shrooms" type="Sprite2D" parent="PropsFront" unique_id=2054728336]
 visible = false
 position = Vector2(2072, 169)
 texture = ExtResource("12_qtl5n")
-
-[node name="Shrooms2" type="Sprite2D" parent="PropsFront" unique_id=1018227467]
-position = Vector2(1562, 183)
-texture = ExtResource("12_qtl5n")
-
-[node name="Door" type="Sprite2D" parent="PropsFront" unique_id=652141502]
-position = Vector2(2007, 159)
-texture = ExtResource("17_06f2i")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1961119057]
 
@@ -310,12 +296,12 @@ position = Vector2(146, 147)
 shape = SubResource("RectangleShape2D_brk")
 
 [node name="LinhaDeChegada" type="Area2D" parent="." unique_id=1365290909]
+position = Vector2(3550, 100)
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("10_w47uh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LinhaDeChegada" unique_id=842373276]
-position = Vector2(3550, 100)
 shape = SubResource("RectangleShape2D_oe8m4")
 
 [connection signal="body_entered" from="LinhaDeChegada" to="LinhaDeChegada" method="_on_body_entered"]
