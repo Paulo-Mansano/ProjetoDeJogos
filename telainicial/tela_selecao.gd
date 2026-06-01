@@ -10,7 +10,7 @@ func _on_button_tutorial_pressed():
 
 
 func _on_button_fase1_pressed():
-	get_tree().change_scene_to_file("res://World/world.tscn")
+	get_tree().change_scene_to_file("res://World/world_fase1.tscn")
 
 
 func _on_button_voltar_pressed():
