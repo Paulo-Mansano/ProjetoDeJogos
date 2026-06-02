@@ -18,8 +18,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brk"]
 size = Vector2(16, 18)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8m4"]
-size = Vector2(50, 238)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awrha"]
+size = Vector2(34.5, 238)
 
 [node name="World" type="Node2D" unique_id=1434655207]
 texture_filter = 1
@@ -295,13 +295,13 @@ texture = ExtResource("30_crate")
 position = Vector2(146, 147)
 shape = SubResource("RectangleShape2D_brk")
 
-[node name="LinhaDeChegada" type="Area2D" parent="." unique_id=1365290909]
-position = Vector2(3550, 100)
+[node name="LinhaDeChegada" type="Area2D" parent="." unique_id=1637513592]
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("10_w47uh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LinhaDeChegada" unique_id=842373276]
-shape = SubResource("RectangleShape2D_oe8m4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LinhaDeChegada" unique_id=1875685305]
+position = Vector2(1625, 133)
+shape = SubResource("RectangleShape2D_awrha")
 
 [connection signal="body_entered" from="LinhaDeChegada" to="LinhaDeChegada" method="_on_body_entered"]
