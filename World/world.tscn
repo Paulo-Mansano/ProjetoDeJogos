@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="10_dygeg"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="10_w47uh"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
+[ext_resource type="Texture2D" uid="uid://douoefypmrq0d" path="res://image-Photoroom.png" id="15_f23eu"]
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 [ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="30_crate"]
@@ -169,6 +170,13 @@ texture_repeat = 1
 position = Vector2(180, 177)
 scale = Vector2(0.055907164, 0.057984676)
 texture = ExtResource("10_dygeg")
+
+[node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=125406933]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(75, 117.00001)
+scale = Vector2(0.30969492, 0.30177686)
+texture = ExtResource("15_f23eu")
 
 [node name="Sign2" type="Sprite2D" parent="PropsFront" unique_id=695544255]
 texture_filter = 1
