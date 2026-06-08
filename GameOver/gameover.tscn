@@ -67,6 +67,34 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khbwt"]
+bg_color = Color(0.2, 0.2, 0.2, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uc82e"]
+bg_color = Color(0.65, 0.18, 0.05, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jafg"]
+bg_color = Color(1, 0.35, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nyos"]
+bg_color = Color(0.87, 0.27, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Gameover" type="CanvasLayer" unique_id=640737663]
 script = ExtResource("1_khbwt")
 
@@ -126,3 +154,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fcl5m")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nao6t")
 text = "JOGAR NOVAMENTE"
 text_overrun_behavior = 5
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=368755492]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -22.0
+offset_right = 40.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_khbwt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uc82e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jafg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6nyos")
+text = "< voltar"

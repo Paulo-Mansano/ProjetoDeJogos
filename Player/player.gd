@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -300.0
 const ICE_SPEED = 250.0 # Limite maior exclusivo para o gelo
 var tela_game_over = preload("res://GameOver/gameover.tscn")
 
+
 # --- VARIÁVEIS DO GELO (Editáveis no Inspector) ---
 @export var accelerationValue = 0.01
 @export var slideValue = 0.01
@@ -83,6 +84,7 @@ func _physics_process(delta):
 		var nova_tela = tela_game_over.instantiate()
 		get_tree().current_scene.add_child(nova_tela)
 		queue_free()
+
 
 # --- FUNÇÕES DE MOVIMENTO ---
 

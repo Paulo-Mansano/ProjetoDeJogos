@@ -9,9 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_0wqet"]
 [ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_awrha"]
 [ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="10_dygeg"]
+[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://World/Props/plaquinhadegelo.png" id="10_oeat8"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="10_w47uh"]
+[ext_resource type="Texture2D" uid="uid://badrpro507r0i" path="res://controle.png" id="11_5xkvv"]
+[ext_resource type="Texture2D" uid="uid://b2kvbpx02jk36" path="res://mouse.png" id="12_kcyjf"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
-[ext_resource type="Texture2D" uid="uid://douoefypmrq0d" path="res://image-Photoroom.png" id="15_f23eu"]
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 [ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="30_crate"]
@@ -32,7 +34,7 @@ texture_repeat = 1
 motion_scale = Vector2(0, 0)
 
 [node name="Sky" type="Sprite2D" parent="ParallaxBackground/SkyLayer" unique_id=1289217658]
-position = Vector2(-514, -12)
+position = Vector2(-493, 0)
 scale = Vector2(3, 1.5)
 texture = ExtResource("2_w47uh")
 centered = false
@@ -171,24 +173,27 @@ position = Vector2(180, 177)
 scale = Vector2(0.055907164, 0.057984676)
 texture = ExtResource("10_dygeg")
 
-[node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=125406933]
-texture_filter = 1
-texture_repeat = 1
-position = Vector2(75, 117.00001)
-scale = Vector2(0.30969492, 0.30177686)
-texture = ExtResource("15_f23eu")
-
 [node name="Sign2" type="Sprite2D" parent="PropsFront" unique_id=695544255]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(404, 177)
-scale = Vector2(0.055907164, 0.057984676)
-texture = ExtResource("10_dygeg")
+position = Vector2(405, 178)
+scale = Vector2(0.028980888, 0.026511913)
+texture = ExtResource("10_oeat8")
 
 [node name="Shrooms" type="Sprite2D" parent="PropsFront" unique_id=2054728336]
 visible = false
 position = Vector2(2072, 169)
 texture = ExtResource("12_qtl5n")
+
+[node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=830772920]
+position = Vector2(95.000015, 144)
+scale = Vector2(0.049140643, 0.04783715)
+texture = ExtResource("11_5xkvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="PropsFront" unique_id=2030775448]
+position = Vector2(1434.9297, 90.60547)
+scale = Vector2(0.040774737, 0.041558087)
+texture = ExtResource("12_kcyjf")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1961119057]
 
@@ -272,36 +277,9 @@ shape = SubResource("RectangleShape2D_brk")
 
 [node name="BreakableBlock3" type="StaticBody2D" parent="." unique_id=1021702057 groups=["breakable"]]
 
-[node name="Sprite2D2" type="Sprite2D" parent="BreakableBlock3" unique_id=284918079]
-position = Vector2(146, 183)
-scale = Vector2(0.53125, 0.5625)
-texture = ExtResource("30_crate")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BreakableBlock3" unique_id=931813735]
-position = Vector2(146, 183)
-shape = SubResource("RectangleShape2D_brk")
-
 [node name="BreakableBlock4" type="StaticBody2D" parent="." unique_id=35091248 groups=["breakable"]]
 
-[node name="Sprite2D2" type="Sprite2D" parent="BreakableBlock4" unique_id=1065354684]
-position = Vector2(146, 165)
-scale = Vector2(0.53125, 0.5625)
-texture = ExtResource("30_crate")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BreakableBlock4" unique_id=1503556360]
-position = Vector2(146, 165)
-shape = SubResource("RectangleShape2D_brk")
-
 [node name="BreakableBlock5" type="StaticBody2D" parent="." unique_id=224244386 groups=["breakable"]]
-
-[node name="Sprite2D2" type="Sprite2D" parent="BreakableBlock5" unique_id=1478400373]
-position = Vector2(146, 147)
-scale = Vector2(0.53125, 0.5625)
-texture = ExtResource("30_crate")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BreakableBlock5" unique_id=984568065]
-position = Vector2(146, 147)
-shape = SubResource("RectangleShape2D_brk")
 
 [node name="LinhaDeChegada" type="Area2D" parent="." unique_id=1637513592]
 collision_layer = 2
