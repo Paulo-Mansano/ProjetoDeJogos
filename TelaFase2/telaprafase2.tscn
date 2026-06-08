@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wy8refm8gcp7"]
 
 [ext_resource type="Script" uid="uid://doghww6im82t5" path="res://TelaFase2/telaprafase_2.gd" id="1_ejpbg"]
-[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="1_to36i"]
+[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="1_to36i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejpbg"]
 bg_color = Color(0.87, 0.27, 0.1, 1)
@@ -25,6 +25,34 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twb2m"]
+bg_color = Color(0.87, 0.27, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd32g"]
+bg_color = Color(0.2, 0.2, 0.2, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiduq"]
+bg_color = Color(0.65, 0.18, 0.05, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pycxb"]
+bg_color = Color(1, 0.35, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idft2"]
 bg_color = Color(0.87, 0.27, 0.1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
@@ -86,3 +114,20 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_c4r0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w2d1t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_twb2m")
 text = "FASE 2"
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=555085159]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -22.0
+offset_right = 40.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_dd32g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eiduq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pycxb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_idft2")
+text = "< voltar"

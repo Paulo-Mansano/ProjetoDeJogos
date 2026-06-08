@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do52wekr1pn1u"]
 
 [ext_resource type="Script" uid="uid://chhp865vamt4k" path="res://telainicial/tela_inicial.gd" id="1_menu"]
-[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_2yq17"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 content_margin_left = 8.0
@@ -87,7 +87,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bg")
+texture = ExtResource("2_2yq17")
 stretch_mode = 2
 
 [node name="Overlay" type="ColorRect" parent="." unique_id=111111111]
@@ -134,10 +134,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -38.0
-offset_top = -72.0
-offset_right = 38.0
-offset_bottom = -48.0
+offset_left = -40.0
+offset_top = -77.0
+offset_right = 36.0
+offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(38, 12)

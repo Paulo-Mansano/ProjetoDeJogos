@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpkp0go2fi2jg"]
 
 [ext_resource type="Script" uid="uid://cdeeop485115q" path="res://telainicial/tela_selecao.gd" id="1_menu"]
-[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_bg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 bg_color = Color(0.87, 0.27, 0.1, 1)
