@@ -1,6 +1,6 @@
 extends Area2D
 
-var tela_vitoria = preload("res://Tela De Vitoria/teladevitoria.tscn")
+var tela_vitoria = preload("res://Tela De Vitoria Tutorial/teladevitoriatutorial.tscn")
 
 func _on_body_entered(body):
 	if body.name == "Player":

@@ -59,7 +59,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="Telafase2" type="CanvasLayer" unique_id=1856825475]
+[node name="Telafase1" type="CanvasLayer" unique_id=1856825475]
 script = ExtResource("1_ejpbg")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1387131895]
@@ -95,7 +95,7 @@ text = "AVALANCHE"
 horizontal_alignment = 1
 text_overrun_behavior = 5
 
-[node name="ButtonFase2" type="Button" parent="." unique_id=1169823966]
+[node name="ButtonFase1" type="Button" parent="." unique_id=1169823966]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -113,7 +113,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ejpbg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_c4r0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w2d1t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_twb2m")
-text = "FASE 2"
+text = "FASE 1"
 
 [node name="ButtonVoltar" type="Button" parent="." unique_id=555085159]
 anchors_preset = 2
