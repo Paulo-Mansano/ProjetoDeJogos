@@ -3,6 +3,9 @@ extends CanvasLayer
 
 func _ready():
 	$ButtonFase1.grab_focus()
+	# Adicione a linha abaixo para conectar o botão da Fase 1:
+	$ButtonFase1.pressed.connect(_on_button_fase1_pressed) 
+	
 	$ButtonVoltar.pressed.connect(_on_button_voltar_pressed)
 
 

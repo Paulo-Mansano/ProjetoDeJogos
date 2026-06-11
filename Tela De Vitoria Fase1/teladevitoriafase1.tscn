@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dfsncxjs22fa"]
+
+[ext_resource type="Script" uid="uid://vfbr770xfebj" path="res://Tela De Vitoria Fase1/teladevitoriafase1.gd" id="1_pfu5y"]
+[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_x4wd3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecqpn"]
+
+[node name="Teladevitoriafase1" type="CanvasLayer" unique_id=439166708]
+script = ExtResource("1_pfu5y")
+
+[node name="Background" type="TextureRect" parent="." unique_id=480869166]
+texture_filter = 1
+texture_repeat = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x4wd3")
+stretch_mode = 2
+
+[node name="Titulo" type="Label" parent="." unique_id=704116106]
+texture_filter = 1
+texture_repeat = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.063, 0.133, 0.533, 0.75)
+theme_override_colors/font_outline_color = Color(0.063, 0.133, 0.533, 0.9)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 38
+text = "AVALANCHE"
+horizontal_alignment = 1
+text_overrun_behavior = 5
+
+[node name="Vitoria" type="Label" parent="." unique_id=98486571]
+texture_filter = 1
+texture_repeat = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -88.0
+offset_right = -11.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0.87058824, 0.8784314, 0.99607843)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ecqpn")
+text = "Você Venceu!!"
+horizontal_alignment = 1
+text_overrun_behavior = 5
+uppercase = true

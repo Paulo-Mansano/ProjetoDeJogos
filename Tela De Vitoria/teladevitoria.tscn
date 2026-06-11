@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dfsncxjs22fa"]
 
 [ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="1_ecqpn"]
-[ext_resource type="Script" uid="uid://vfbr770xfebj" path="res://Tela De Vitoria/teladevitoria.gd" id="1_hlkr4"]
+[ext_resource type="Script" uid="uid://vfbr770xfebj" path="res://Tela De Vitoria Fase1/teladevitoriafase1.gd" id="1_hlkr4"]
+
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecqpn"]
 

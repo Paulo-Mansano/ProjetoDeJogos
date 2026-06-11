@@ -5,7 +5,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecqpn"]
 
-[node name="Teladevitoria2" type="CanvasLayer" unique_id=439166708]
+[node name="Teladefim" type="CanvasLayer" unique_id=439166708]
 script = ExtResource("1_skm27")
 
 [node name="Background" type="TextureRect" parent="." unique_id=480869166]

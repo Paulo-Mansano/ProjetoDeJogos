@@ -5,7 +5,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecqpn"]
 
-[node name="Teladevitoria2" type="CanvasLayer" unique_id=439166708]
+[node name="Teladevitoriatutorial" type="CanvasLayer" unique_id=439166708]
 script = ExtResource("1_6b3ek")
 
 [node name="Background" type="TextureRect" parent="." unique_id=480869166]
@@ -49,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -384.0
-offset_top = -87.0
-offset_right = -4.0
-offset_bottom = 18.0
+offset_left = -394.0
+offset_top = -88.0
+offset_right = -14.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
