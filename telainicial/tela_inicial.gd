@@ -90,3 +90,9 @@ func _on_button_jogar_pressed() -> void:
 
 func _ir_para_proxima_cena() -> void:
 	get_tree().change_scene_to_file(PROXIMA_CENA)
+	
+	
+func _input(event: InputEvent) -> void:
+	# "ui_cancel" é mapeado por padrão para a tecla ESC no Godot
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
