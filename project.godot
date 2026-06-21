@@ -20,6 +20,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/stretch_mode=0
 config/icon="uid://dl0j1lo5nlm75"
 
+[autoload]
+
+GameManager="*res://Sistema/game_manager.gd"
+
 [display]
 
 window/size/viewport_width=426

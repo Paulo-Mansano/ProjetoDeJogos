@@ -10,5 +10,8 @@ func spawn_feedback():
 
 
 func _on_body_entered(body):
+	# Cada noz coletada aumenta a municao de tiros do player.
+	if body.has_method("coletar_noz"):
+		body.coletar_noz()
 	spawn_feedback()
 	queue_free()
