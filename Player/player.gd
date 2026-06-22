@@ -1,9 +1,19 @@
 extends CharacterBody2D
 
+@export var torpedo_scene: PackedScene
+@onready var aim_line = $AimLine
+
+# --- MUNICAO (TIROS) ---
+@export var municao_inicial: int = 5  # Tiros com que o player comeca a fase
+var municao: int
+var hud_label: Label
+
 # --- VARIÁVEIS DE VELOCIDADE ---
 const SPEED = 110.0
 const JUMP_VELOCITY = -300.0
 const ICE_SPEED = 250.0 # Limite maior exclusivo para o gelo
+var tela_game_over = preload("res://GameOver/gameover.tscn")
+
 
 # --- VARIÁVEIS DO GELO (Editáveis no Inspector) ---
 @export var accelerationValue = 0.01
@@ -25,6 +35,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumped_from_ice: bool = false
 var _frames_on_non_ice: int = 999
 
+func _ready():
+	municao = municao_inicial
+	_criar_hud()
+	_atualizar_hud()
+
 func _physics_process(delta):
 	# 1. Gravidade
 	if not is_on_floor():
@@ -45,7 +60,7 @@ func _physics_process(delta):
 		coyote_timer = max(coyote_timer - delta, 0.0)
 
 	# 3. Pulo (com coyote)
-	if Input.is_action_just_pressed("ui_accept") and coyote_timer > 0:
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up")) and coyote_timer > 0:
 		velocity.y = JUMP_VELOCITY
 		coyote_timer = 0.0
 
@@ -74,9 +89,12 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animations(input_axis)
 	
-	# 6. Mecânica de Morte por Queda (ajuste o 350 se necessário)
+	# 6. Mecânica de Morte por Queda
 	if global_position.y > 350:
-		get_tree().reload_current_scene()
+		var nova_tela = tela_game_over.instantiate()
+		get_tree().current_scene.add_child(nova_tela)
+		queue_free()
+
 
 # --- FUNÇÕES DE MOVIMENTO ---
 
@@ -133,3 +151,76 @@ func _is_on_ice():
 			if collider and collider.name == "iceBlocks":
 				return true
 	return false
+
+# --- TORPEDO ---
+
+func _process(_delta):
+	var direction = (get_global_mouse_position() - global_position).normalized()
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		aim_line.visible = true
+		aim_line.points = [Vector2.ZERO, direction * 100]
+	else:
+		aim_line.visible = false
+
+func _input(event):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_W:
+		if coyote_timer > 0:
+			velocity.y = JUMP_VELOCITY
+			coyote_timer = 0.0
+	elif event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			shoot_torpedo()
+
+func shoot_torpedo():
+	if torpedo_scene == null:
+		return
+	# Sem municao, nao atira.
+	if municao <= 0:
+		return
+	municao -= 1
+	_atualizar_hud()
+	var torpedo = torpedo_scene.instantiate()
+	get_parent().add_child(torpedo)
+	torpedo.global_position = global_position
+	torpedo.direction = (get_global_mouse_position() - global_position).normalized()
+
+# --- MUNICAO / NOZES ---
+
+# Chamada pela Noz (pickup) quando o player a coleta.
+func coletar_noz():
+	municao += 1
+	_atualizar_hud()
+
+# --- HUD (contador de tiros) ---
+
+func _criar_hud():
+	var camada := CanvasLayer.new()
+	add_child(camada)
+
+	# Caixa no canto superior DIREITO: [icone noz] [numero]x
+	var caixa := HBoxContainer.new()
+	caixa.add_theme_constant_override("separation", 2)
+	camada.add_child(caixa)
+	caixa.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT, Control.PRESET_MODE_MINSIZE, 6)
+	# Cresce para a esquerda (para dentro da tela), nao para fora.
+	caixa.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+
+	# Icone da noz (usa o primeiro quadro da spritesheet).
+	var icone := TextureRect.new()
+	var noz_tex := AtlasTexture.new()
+	noz_tex.atlas = load("res://Pickups/Noz/noz.png")
+	noz_tex.region = Rect2(0, 0, 227, 219)
+	icone.texture = noz_tex
+	icone.custom_minimum_size = Vector2(14, 14)
+	icone.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	caixa.add_child(icone)
+
+	hud_label = Label.new()
+	hud_label.add_theme_font_size_override("font_size", 12)
+	hud_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	caixa.add_child(hud_label)
+
+func _atualizar_hud():
+	if hud_label:
+		hud_label.text = "%dx" % municao

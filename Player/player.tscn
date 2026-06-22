@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://bapvy71043313"]
+[gd_scene format=3 uid="uid://bapvy71043313"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_1akqa"]
+[ext_resource type="Script" uid="uid://cefula47ay66j" path="res://Player/player.gd" id="1_1akqa"]
+[ext_resource type="PackedScene" uid="uid://cxrse4o7w4vam" path="res://Torpedo.tscn" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://bt8gb54hjkhl1" path="res://Player/player.png" id="2_vtor2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ok28f"]
@@ -131,16 +132,28 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=169536425]
+texture_filter = 1
+texture_repeat = 1
 collision_layer = 2
 script = ExtResource("1_1akqa")
+torpedo_scene = ExtResource("2_btcbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111069220]
+texture_filter = 1
+texture_repeat = 1
 shape = SubResource("RectangleShape2D_ok28f")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=138409733]
+texture_filter = 1
+texture_repeat = 1
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_f4wda")
 animation = &"run"
 autoplay = "idle"
 frame_progress = 0.751001
+
+[node name="AimLine" type="Line2D" parent="." unique_id=687492918]
+visible = false
+width = 3.0
+default_color = Color(0.7294118, 0.7294118, 0.7294118, 0.7607843)
