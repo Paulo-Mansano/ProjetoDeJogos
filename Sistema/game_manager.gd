@@ -10,13 +10,13 @@ extends Node
 # Em true, todas as fases ficam destravadas (util para playtesting).
 # Em false, o jogador precisa concluir uma fase para liberar a proxima.
 const DESBLOQUEAR_TUDO := false
-
 # --- LISTA DE FASES (ordem = ordem de progressao) ---
 # nome  -> texto que aparece no botao da tela de selecao
 # cena  -> caminho da cena da fase
 const FASES := [
 	{ "nome": "Tutorial", "cena": "res://World/world.tscn" },
 	{ "nome": "Fase 1", "cena": "res://World/world_fase1.tscn" },
+	{ "nome": "Fase 2", "cena": "res://World/world_fase2.tscn" },
 ]
 
 const ARQUIVO_PROGRESSO := "user://progresso.save"

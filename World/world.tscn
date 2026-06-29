@@ -3,18 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://bcsnyw4t6pnw2" path="res://World/parallax_background.tscn" id="1_2dejq"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="1_vr7hw"]
 [ext_resource type="TileSet" uid="uid://dgp60fa4r1vdi" path="res://World/world-tileset.tres" id="2_2cmn2"]
-[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_w47uh"]
-[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_lo5ox"]
-[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_h2aik"]
-[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_0wqet"]
-[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_awrha"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://Desing/Background/Sky.png" id="2_w47uh"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://Desing/Background/BG.png" id="3_lo5ox"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://Desing/Background/Mid.png" id="4_h2aik"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://Desing/Background/Snow.png" id="5_0wqet"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://Desing/Background/Foreground.png" id="6_awrha"]
 [ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="10_dygeg"]
 [ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://World/Props/plaquinhadegelo.png" id="10_oeat8"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="10_w47uh"]
-[ext_resource type="Texture2D" uid="uid://badrpro507r0i" path="res://controle.png" id="11_5xkvv"]
-[ext_resource type="Texture2D" uid="uid://b2kvbpx02jk36" path="res://mouse.png" id="12_kcyjf"]
+[ext_resource type="Texture2D" uid="uid://badrpro507r0i" path="res://Desing/Controles/controle.png" id="11_5xkvv"]
+[ext_resource type="Texture2D" uid="uid://c7qnymokoxmb8" path="res://Desing/Controles/mouse.png" id="12_kcyjf"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
-[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
+[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Desing/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 [ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="30_crate"]
 
@@ -185,14 +185,14 @@ visible = false
 position = Vector2(2072, 169)
 texture = ExtResource("12_qtl5n")
 
-[node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=830772920]
-position = Vector2(95.000015, 144)
-scale = Vector2(0.049140643, 0.04783715)
+[node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=1908300872]
+position = Vector2(98, 146)
+scale = Vector2(0.16644964, 0.15012713)
 texture = ExtResource("11_5xkvv")
 
-[node name="Sprite2D" type="Sprite2D" parent="PropsFront" unique_id=2030775448]
-position = Vector2(1434.9297, 90.60547)
-scale = Vector2(0.040774737, 0.041558087)
+[node name="ControleMouse" type="Sprite2D" parent="PropsFront" unique_id=325560841]
+position = Vector2(1433.5, 91.62501)
+scale = Vector2(0.14027782, 0.15176599)
 texture = ExtResource("12_kcyjf")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1961119057]
