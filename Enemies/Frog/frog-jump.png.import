@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cproulx8s6s0b"
-path="res://.godot/imported/Snow.png-e72749e70059947b682e5dcc4a3ca627.ctex"
+uid="uid://m7jx3eb2ey3e"
+path="res://.godot/imported/frog-jump.png-5891ceefa70f417cd53ed6be1e1687e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Desing/Background/Snow.png"
-dest_files=["res://.godot/imported/Snow.png-e72749e70059947b682e5dcc4a3ca627.ctex"]
+source_file="res://Enemies/Frog/frog-jump.png"
+dest_files=["res://.godot/imported/frog-jump.png-5891ceefa70f417cd53ed6be1e1687e4.ctex"]
 
 [params]
 

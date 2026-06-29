@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv6it3gn86h1c"
-path="res://.godot/imported/noz.png-977884e1c8a42da7f12a0ccdb3b0b0c5.ctex"
+path="res://.godot/imported/noz.png-99ab72644816e3538d849965442001c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Desing/Noz/noz.png"
-dest_files=["res://.godot/imported/noz.png-977884e1c8a42da7f12a0ccdb3b0b0c5.ctex"]
+source_file="res://Design/Noz/noz.png"
+dest_files=["res://.godot/imported/noz.png-99ab72644816e3538d849965442001c1.ctex"]
 
 [params]
 

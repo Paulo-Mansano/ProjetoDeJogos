@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mn6xldte3f51"
-path="res://.godot/imported/BG.png-d14951fc2217725b6f3fe2c50992b5b2.ctex"
+uid="uid://baiw3llc6vqmf"
+path="res://.godot/imported/sign.png-52ed840e38a55c0c050a6333fc5bddf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Desing/Background/BG.png"
-dest_files=["res://.godot/imported/BG.png-d14951fc2217725b6f3fe2c50992b5b2.ctex"]
+source_file="res://Design/placas/sign.png"
+dest_files=["res://.godot/imported/sign.png-52ed840e38a55c0c050a6333fc5bddf2.ctex"]
 
 [params]
 

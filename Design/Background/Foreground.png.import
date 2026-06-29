@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baiw3llc6vqmf"
-path="res://.godot/imported/sign.png-4692a4fefa7ec9973c773eee53a81d7b.ctex"
+uid="uid://b4g3fo6fdbkme"
+path="res://.godot/imported/Foreground.png-bfb19e5a63857d207115f7050a6b62c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Props/sign.png"
-dest_files=["res://.godot/imported/sign.png-4692a4fefa7ec9973c773eee53a81d7b.ctex"]
+source_file="res://Design/Background/Foreground.png"
+dest_files=["res://.godot/imported/Foreground.png-bfb19e5a63857d207115f7050a6b62c3.ctex"]
 
 [params]
 
