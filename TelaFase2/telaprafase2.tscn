@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wy8refm8gcp7"]
 
 [ext_resource type="Script" uid="uid://doghww6im82t5" path="res://TelaFase2/telaprafase_2.gd" id="1_ejpbg"]
-[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="1_to36i"]
+[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="1_to36i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejpbg"]
 bg_color = Color(0.87, 0.27, 0.1, 1)
@@ -59,7 +59,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="Telafaseprafase2" type="CanvasLayer" unique_id=1856825475]
+[node name="Telafase2" type="CanvasLayer" unique_id=1856825475]
 script = ExtResource("1_ejpbg")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1387131895]
@@ -101,10 +101,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -52.0
-offset_top = -83.0
-offset_right = 28.0
-offset_bottom = -63.0
+offset_left = -40.0
+offset_top = -75.0
+offset_right = 40.0
+offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)

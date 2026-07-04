@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bsigand67dr2i"]
 
-[ext_resource type="Script" uid="uid://blmyltlpr4hth" path="res://Tela De Fim/teladefim.gd" id="1_skm27"]
-[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_l88on"]
+[ext_resource type="Script" uid="uid://blmyltlpr4hth" path="res://Tela De Fim/teladevitoria.gd" id="1_skm27"]
+[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_l88on"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecqpn"]
 
-[node name="Teladefim" type="CanvasLayer" unique_id=439166708]
+[node name="Teladevitoria2" type="CanvasLayer" unique_id=439166708]
 script = ExtResource("1_skm27")
 
 [node name="Background" type="TextureRect" parent="." unique_id=480869166]
@@ -41,7 +41,7 @@ text = "AVALANCHE"
 horizontal_alignment = 1
 text_overrun_behavior = 5
 
-[node name="FIM" type="Label" parent="." unique_id=98486571]
+[node name="Vitoria" type="Label" parent="." unique_id=98486571]
 texture_filter = 1
 texture_repeat = 1
 anchors_preset = 7
@@ -49,20 +49,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -382.0
-offset_top = -99.0
-offset_right = -2.0
-offset_bottom = 6.0
+offset_left = -383.0
+offset_top = -91.0
+offset_right = -3.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
-theme_override_colors/font_color = Color(0, 0.87058824, 0.8784314, 0.99607843)
+theme_override_colors/font_color = Color(0, 0.40198904, 0.87993884, 0.99607843)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/font_size = 9
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ecqpn")
-text = "FIM !!"
+text = "FiM!!"
 horizontal_alignment = 1
 text_overrun_behavior = 5
 uppercase = true

@@ -1,6 +1,8 @@
-extends Control
+extends CanvasLayer
 
 func _ready():
-	# Cria um temporizador de 5 segundos e, quando terminar, fecha o jogo
+	# A contagem só começa quando a tela de vitória aparece
 	await get_tree().create_timer(5.0).timeout
-	get_tree().quit()
+	
+	# Troca para a Fase 2
+	get_tree().change_scene_to_file("res://TelaFase2/telaprafase2.tscn")

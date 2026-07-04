@@ -20,6 +20,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/stretch_mode=0
 config/icon="uid://bau3uoyt28m2g"
 
+[autoload]
+
+GameManager="*res://Sistema/game_manager.gd"
+
 [display]
 
 window/size/viewport_width=426
@@ -32,7 +36,8 @@ window/stretch/scale_mode="integer"
 [file_customization]
 
 folder_colors={
-"res://Design/": "purple"
+"res://Desing/": "purple",
+"res://Sistema/": "orange"
 }
 
 [input]

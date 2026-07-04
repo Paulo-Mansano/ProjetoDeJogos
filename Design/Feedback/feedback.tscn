@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qa0kmgf7hoxr"]
 
-[ext_resource type="Texture2D" uid="uid://ccj8h2agwvo7o" path="res://Design/Feedback/item-feedback.png" id="1_cr7ej"]
+[ext_resource type="Texture2D" uid="uid://ccj8h2agwvo7o" path="res://Desing/Feedback/item-feedback.png" id="1_cr7ej"]
 
 [sub_resource type="Animation" id="Animation_438vi"]
 length = 0.001

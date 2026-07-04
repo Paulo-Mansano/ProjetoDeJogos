@@ -149,8 +149,9 @@ texture_filter = 1
 texture_repeat = 1
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_f4wda")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.751001
 
 [node name="AimLine" type="Line2D" parent="." unique_id=687492918]
 visible = false

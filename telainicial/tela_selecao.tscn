@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpkp0go2fi2jg"]
 
 [ext_resource type="Script" uid="uid://cdeeop485115q" path="res://telainicial/tela_selecao.gd" id="1_menu"]
-[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_bg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 bg_color = Color(0.87, 0.27, 0.1, 1)
@@ -84,47 +84,33 @@ text = "AVALANCHE"
 horizontal_alignment = 1
 text_overrun_behavior = 5
 
-[node name="ButtonTutorial" type="Button" parent="." unique_id=1709763283]
+[node name="ListaFases" type="VBoxContainer" parent="." unique_id=1709763283]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -41.0
-offset_top = -99.0
-offset_right = 39.0
-offset_bottom = -79.0
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -10.0
+offset_right = 45.0
+offset_bottom = 30.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
-text = "TUTORIAL"
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
 
-[node name="ButtonFase1" type="Button" parent="." unique_id=360469606]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -75.0
-offset_right = 40.0
-offset_bottom = -55.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="BotaoTemplate" type="Button" parent="ListaFases" unique_id=360469606]
+visible = false
+custom_minimum_size = Vector2(90, 20)
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
-text = "FASE 1"
+text = "FASE"
 
 [node name="ButtonVoltar" type="Button" parent="." unique_id=104820721]
 layout_mode = 1
@@ -144,6 +130,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
 theme_override_styles/focus = SubResource("StyleBoxFlat_focus")
 text = "< voltar"
 
-[connection signal="pressed" from="ButtonTutorial" to="." method="_on_button_tutorial_pressed"]
-[connection signal="pressed" from="ButtonFase1" to="." method="_on_button_fase1_pressed"]
 [connection signal="pressed" from="ButtonVoltar" to="." method="_on_button_voltar_pressed"]

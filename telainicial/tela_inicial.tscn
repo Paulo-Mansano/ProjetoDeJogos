@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do52wekr1pn1u"]
 
 [ext_resource type="Script" uid="uid://chhp865vamt4k" path="res://telainicial/tela_inicial.gd" id="1_menu"]
-[ext_resource type="Texture2D" uid="uid://cvfiwk6p85v5o" path="res://telainicial/backgroundtela.png" id="2_2yq17"]
+[ext_resource type="Texture2D" uid="uid://dkpjpuqx0cdyy" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_bg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
 content_margin_left = 8.0
@@ -87,7 +87,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_2yq17")
+texture = ExtResource("2_bg")
 stretch_mode = 2
 
 [node name="Overlay" type="ColorRect" parent="." unique_id=111111111]
@@ -109,10 +109,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -130.0
+offset_left = -133.0
 offset_top = 8.0
-offset_right = 130.0
-offset_bottom = 52.0
+offset_right = 127.0
+offset_bottom = 61.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.063, 0.133, 0.533, 0.75)
@@ -134,10 +134,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -77.0
-offset_right = 36.0
-offset_bottom = -51.0
+offset_left = -49.0
+offset_top = -80.0
+offset_right = 27.0
+offset_bottom = -54.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(38, 12)
