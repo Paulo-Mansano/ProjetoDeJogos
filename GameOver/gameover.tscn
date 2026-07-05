@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cklgigombuvp3"]
 
 [ext_resource type="Script" uid="uid://dbfewgvi8xpqd" path="res://GameOver/gameover.gd" id="1_khbwt"]
-[ext_resource type="Texture2D" uid="uid://8ypi05bjhbti" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_uc82e"]
+[ext_resource type="Texture2D" uid="uid://dkpjpuqx0cdyy" path="res://telainicial/Tela_inicial_jogo_puzzle.png" id="2_uc82e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsdcu"]
 content_margin_left = 8.0
@@ -139,10 +139,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.0
-offset_top = 46.0
-offset_right = 77.0
-offset_bottom = 72.0
+offset_left = -81.0
+offset_top = 40.0
+offset_right = 69.0
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(38, 12)

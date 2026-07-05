@@ -3,27 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://bcsnyw4t6pnw2" path="res://World/parallax_background.tscn" id="1_2dejq"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="1_vr7hw"]
 [ext_resource type="TileSet" uid="uid://dgp60fa4r1vdi" path="res://World/world-tileset.tres" id="2_2cmn2"]
-[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_w47uh"]
-[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_lo5ox"]
-[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_h2aik"]
-[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_0wqet"]
-[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_awrha"]
-[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="10_dygeg"]
-[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://World/Props/plaquinhadegelo.png" id="10_oeat8"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://Design/Background/Sky.png" id="2_w47uh"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://Design/Background/BG.png" id="3_lo5ox"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://Design/Background/Mid.png" id="4_h2aik"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://Design/Background/Snow.png" id="5_0wqet"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://Design/Background/Foreground.png" id="6_awrha"]
+[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://Design/placas/sign.png" id="10_dygeg"]
+[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://Design/placas/plaquinhadegelo.png" id="10_oeat8"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="10_w47uh"]
-[ext_resource type="Texture2D" uid="uid://badrpro507r0i" path="res://controle.png" id="11_5xkvv"]
-[ext_resource type="Texture2D" uid="uid://b2kvbpx02jk36" path="res://mouse.png" id="12_kcyjf"]
+[ext_resource type="Texture2D" uid="uid://badrpro507r0i" path="res://Design/Controles/controle.png" id="11_5xkvv"]
+[ext_resource type="Texture2D" uid="uid://c7qnymokoxmb8" path="res://Design/Controles/mouse.png" id="12_kcyjf"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="12_qtl5n"]
+[ext_resource type="Texture2D" uid="uid://pdm37ytjdvb4" path="res://Design/Controles/DicaTutorial.png" id="13_dg1ng"]
 [ext_resource type="Script" uid="uid://dga2eu4dlhd0i" path="res://World/breakable_block.gd" id="16_26uyv"]
 [ext_resource type="Script" uid="uid://dq0nhquj6qnr" path="res://World/breakable_block_pedra_tutorial.gd" id="18_kcyjf"]
-[ext_resource type="Texture2D" uid="uid://cdewxptl21ang" path="res://World/Props/BIG-CRATE-MEIO-RACAHADA.png" id="18_o6lw0"]
-[ext_resource type="Texture2D" uid="uid://oodrrp0j3ubw" path="res://World/Props/BIG-CRATE-QUEBRADA.png" id="19_x0pyu"]
-[ext_resource type="Texture2D" uid="uid://5x8gx5n8hqu7" path="res://World/Props/PEDRARACHADA.png" id="19_xw5lg"]
-[ext_resource type="Texture2D" uid="uid://d28vh7gqlbfuj" path="res://World/Props/PEDRA.png" id="20_0lysu"]
-[ext_resource type="Texture2D" uid="uid://7i471asbwrqc" path="res://World/Props/PEDRA-DESTRUIDA.png" id="23_x0pyu"]
-[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
+[ext_resource type="Texture2D" uid="uid://hr5n0us42mf5" path="res://World/Imagens De Inverno/BIG-CRATE-MEIO-RACAHADA.png" id="18_o6lw0"]
+[ext_resource type="Texture2D" uid="uid://cd78o5fitslne" path="res://World/Imagens De Inverno/big-crate.png" id="19_dg1ng"]
+[ext_resource type="Texture2D" uid="uid://ctu53dwm5488g" path="res://World/Imagens De Inverno/BIG-CRATE-QUEBRADA.png" id="19_x0pyu"]
+[ext_resource type="Texture2D" uid="uid://c62j7ahlg2syq" path="res://World/Imagens De Inverno/PEDRARACHADA.png" id="19_xw5lg"]
+[ext_resource type="Texture2D" uid="uid://cx3jt86wns0kg" path="res://World/Imagens De Inverno/PEDRA.png" id="20_0lysu"]
+[ext_resource type="Texture2D" uid="uid://d28g034vvu06b" path="res://World/Imagens De Inverno/PEDRA-DESTRUIDA.png" id="23_x0pyu"]
+[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Design/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
-[ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="30_crate"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brk"]
 size = Vector2(16, 15)
@@ -165,10 +166,6 @@ tile_set = ExtResource("2_2cmn2")
 format = 2
 layer_0/tile_data = PackedInt32Array(786459, 458753, 1, 786460, 458753, 1, 786461, 458753, 1, 786462, 458753, 1, 786463, 458753, 1, 786464, 458753, 1, 786465, 458753, 1, 786466, 458753, 1, 786467, 458753, 1, 786468, 458753, 1, 786469, 458753, 1, 786470, 458753, 1, 786477, 458753, 1, 786478, 458753, 1, 786479, 458753, 1, 786480, 458753, 1, 786481, 458753, 1, 786482, 458753, 1, 786475, 458753, 1, 786476, 458753, 1, 786483, 458753, 1, 786484, 458753, 1, 786485, 458753, 1, 786486, 458753, 1)
 
-[node name="TileMap2" type="TileMap" parent="." unique_id=857329622]
-tile_set = ExtResource("2_2cmn2")
-format = 2
-
 [node name="PropsFront" type="Node2D" parent="." unique_id=1335110796]
 texture_filter = 1
 texture_repeat = 1
@@ -193,19 +190,19 @@ position = Vector2(2072, 169)
 texture = ExtResource("12_qtl5n")
 
 [node name="ControlesTutorial" type="Sprite2D" parent="PropsFront" unique_id=830772920]
-position = Vector2(95.000015, 144)
-scale = Vector2(0.049140643, 0.04783715)
+position = Vector2(118.00001, 144.00002)
+scale = Vector2(0.14294814, 0.13338862)
 texture = ExtResource("11_5xkvv")
 
-[node name="Sprite2D" type="Sprite2D" parent="PropsFront" unique_id=2030775448]
-position = Vector2(1259.0001, 107)
-scale = Vector2(0.040774737, 0.041558087)
+[node name="ControlesTutorial2" type="Sprite2D" parent="PropsFront" unique_id=2063316075]
+position = Vector2(1220, 142)
+scale = Vector2(0.04647956, 0.04536595)
 texture = ExtResource("12_kcyjf")
 
-[node name="Sprite2D2" type="Sprite2D" parent="PropsFront" unique_id=1678293685]
-position = Vector2(1563, 76)
-scale = Vector2(0.040774737, 0.041558087)
-texture = ExtResource("12_kcyjf")
+[node name="ControlesTutorial3" type="Sprite2D" parent="PropsFront" unique_id=262899147]
+position = Vector2(1419.6938, 113.68718)
+scale = Vector2(0.03141151, 0.028228913)
+texture = ExtResource("13_dg1ng")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1961119057]
 
@@ -273,7 +270,7 @@ quebrada_texture = ExtResource("19_x0pyu")
 [node name="Sprite2D" type="Sprite2D" parent="BreakableBlock" unique_id=38996660]
 position = Vector2(1323, 151)
 scale = Vector2(0.53125, 0.5625)
-texture = ExtResource("30_crate")
+texture = ExtResource("19_dg1ng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock" unique_id=630918257]
 position = Vector2(1323, 151)
@@ -309,7 +306,7 @@ quebrada_texture = ExtResource("19_x0pyu")
 [node name="Sprite2D" type="Sprite2D" parent="BreakableBlock2" unique_id=971870515]
 position = Vector2(1323, 133)
 scale = Vector2(0.53125, 0.5625)
-texture = ExtResource("30_crate")
+texture = ExtResource("19_dg1ng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock2" unique_id=951978013]
 position = Vector2(1323, 133)

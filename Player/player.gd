@@ -236,7 +236,7 @@ func _criar_hud():
 	# Icone da noz (usa o primeiro quadro da spritesheet).
 	var icone := TextureRect.new()
 	var noz_tex := AtlasTexture.new()
-	noz_tex.atlas = load("res://Pickups/Noz/noz.png")
+	noz_tex.atlas = load("res://Design/Noz/noz.png")
 	noz_tex.region = Rect2(0, 0, 227, 219)
 	icone.texture = noz_tex
 	icone.custom_minimum_size = Vector2(14, 14)
@@ -246,6 +246,8 @@ func _criar_hud():
 
 	hud_label = Label.new()
 	hud_label.add_theme_font_size_override("font_size", 12)
+	#cor da pontuação
+	hud_label.add_theme_color_override("font_color", Color.BLACK)
 	hud_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	caixa.add_child(hud_label)
 

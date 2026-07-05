@@ -16,9 +16,9 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Avalanche"
 run/main_scene="uid://do52wekr1pn1u"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/stretch_mode=0
-config/icon="uid://dl0j1lo5nlm75"
+config/icon="uid://bau3uoyt28m2g"
 
 [autoload]
 
@@ -32,6 +32,13 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
+
+[file_customization]
+
+folder_colors={
+"res://Desing/": "purple",
+"res://Sistema/": "orange"
+}
 
 [input]
 
