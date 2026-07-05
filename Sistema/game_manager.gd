@@ -10,7 +10,6 @@ extends Node
 # Em true, todas as fases ficam destravadas (util para playtesting).
 # Em false, o jogador precisa concluir uma fase para liberar a proxima.
 const DESBLOQUEAR_TUDO := false
-
 # --- LISTA DE FASES (ordem = ordem de progressao) ---
 # nome  -> texto que aparece no botao da tela de selecao
 # cena  -> caminho da cena da fase

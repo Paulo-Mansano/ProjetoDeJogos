@@ -1,28 +1,38 @@
 [gd_scene format=3 uid="uid://dboexre7jqqjf"]
 
 [ext_resource type="PackedScene" uid="uid://bcsnyw4t6pnw2" path="res://World/parallax_background.tscn" id="1_vxsoh"]
-[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_uenjg"]
-[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_5awpx"]
-[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_3hd4o"]
-[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_xlm64"]
-[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_rmj87"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://Design/Background/Sky.png" id="2_uenjg"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://Design/Background/BG.png" id="3_5awpx"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://Design/Background/Mid.png" id="4_3hd4o"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://Design/Background/Snow.png" id="5_xlm64"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://Design/Background/Foreground.png" id="6_rmj87"]
 [ext_resource type="TileSet" uid="uid://dgp60fa4r1vdi" path="res://World/world-tileset.tres" id="7_02rbd"]
-[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="8_q6uln"]
-[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://World/Props/plaquinhadegelo.png" id="9_e80vf"]
+[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://Design/placas/sign.png" id="8_q6uln"]
+[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://Design/placas/plaquinhadegelo.png" id="9_e80vf"]
+[ext_resource type="Texture2D" uid="uid://cwmmw1b1j47u7" path="res://World/Imagens De Inverno/door_winter.png" id="11_e80vf"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="11_l878w"]
-[ext_resource type="Texture2D" uid="uid://b584guu0048qd" path="res://World/Props/door.png" id="12_05ouo"]
 [ext_resource type="Texture2D" uid="uid://dn1i1m7stpeot" path="res://World/dica.png" id="13_5awpx"]
-[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="13_q3fdg"]
+[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Design/Noz/noz.tscn" id="13_q3fdg"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="14_u34an"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="15_jv6lx"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="16_qmkqq"]
 [ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="17_uenjg"]
+[ext_resource type="Script" uid="uid://dq0nhquj6qnr" path="res://World/breakable_block_pedra_tutorial.gd" id="18_xlm64"]
+[ext_resource type="Texture2D" uid="uid://d28g034vvu06b" path="res://World/Imagens De Inverno/PEDRA-DESTRUIDA.png" id="19_e80vf"]
+[ext_resource type="Texture2D" uid="uid://c62j7ahlg2syq" path="res://World/Imagens De Inverno/PEDRARACHADA.png" id="19_rmj87"]
+[ext_resource type="Texture2D" uid="uid://cx3jt86wns0kg" path="res://World/Imagens De Inverno/PEDRA.png" id="20_02rbd"]
+[ext_resource type="Script" uid="uid://dga2eu4dlhd0i" path="res://World/breakable_block.gd" id="21_3t73y"]
+[ext_resource type="Texture2D" uid="uid://hr5n0us42mf5" path="res://World/Imagens De Inverno/BIG-CRATE-MEIO-RACAHADA.png" id="22_l878w"]
+[ext_resource type="Texture2D" uid="uid://ctu53dwm5488g" path="res://World/Imagens De Inverno/BIG-CRATE-QUEBRADA.png" id="23_05ouo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oe8m4"]
 size = Vector2(50, 238)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5awpx"]
-size = Vector2(16, 18)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3fdg"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u34an"]
+size = Vector2(16, 15)
 
 [node name="World" type="Node2D" unique_id=1434655207]
 texture_filter = 1
@@ -151,7 +161,7 @@ centered = false
 [node name="TileMap" type="TileMap" parent="." unique_id=2131152504]
 tile_set = ExtResource("7_02rbd")
 format = 2
-layer_0/tile_data = PackedInt32Array(851967, 327680, 3, 786431, 327680, 3, 720895, 327680, 3, 655359, 327680, 3, 589823, 327680, 3, 524287, 327680, 3, 458751, 327680, 3, 393215, 327680, 3, 327679, 327680, 3, 262143, 327680, 3, 196607, 327680, 3, 917503, 327680, 3, 983039, 327680, 3, 1048575, 196608, 3, 720904, 196608, 7, 720903, 196608, 7, 720899, 196608, 7, 720896, 65536, 7, 720943, 65536, 7, 720944, 65536, 7, 720953, 65536, 7, 720949, 65536, 7, 655485, 1245184, 18, 852152, 458752, 7, 786585, 196608, 7, 786584, 196608, 7, 786587, 65536, 7, 786639, 655360, 1, 786640, 589824, 5, 786643, 589824, 1, 786644, 655360, 1, 655583, 196608, 7, 786432, 262144, 1, 786433, 262144, 1, 786434, 262144, 1, 786435, 262144, 1, 851971, 262144, 2, 786436, 262144, 1, 851972, 262144, 2, 786437, 262144, 1, 851973, 262144, 2, 786438, 262144, 1, 851974, 262144, 2, 786439, 262144, 1, 851975, 262144, 2, 786440, 262144, 1, 851976, 262144, 2, 786441, 262144, 1, 851977, 262144, 2, 851978, 262144, 2, 917504, 262144, 3, 983040, 262144, 4, 917505, 262144, 3, 983041, 262144, 6, 917506, 262144, 3, 983042, 262144, 6, 917507, 262144, 3, 983043, 262144, 6, 917508, 262144, 3, 983044, 262144, 6, 917509, 262144, 3, 983045, 262144, 6, 917510, 262144, 3, 983046, 262144, 6, 917511, 262144, 3, 983047, 262144, 6, 917512, 262144, 3, 983048, 262144, 6, 917513, 262144, 3, 983049, 262144, 6, 917514, 262144, 3, 983050, 262144, 6, 786443, 327680, 1, 786442, 262144, 1, 851979, 327680, 2, 917515, 327680, 2, 983051, 327680, 6, 786448, 196608, 1, 851984, 196608, 2, 917520, 196608, 2, 786449, 262144, 1, 851985, 262144, 2, 917521, 262144, 3, 786450, 327680, 1, 851986, 327680, 2, 917522, 327680, 2, 983056, 196608, 6, 983057, 262144, 6, 983058, 327680, 6, 786453, 196608, 1, 851989, 196608, 2, 786454, 262144, 1, 851990, 262144, 2, 786455, 327680, 1, 851991, 327680, 2, 852001, 196608, 1, 917537, 196608, 2, 852002, 262144, 1, 917538, 262144, 2, 852003, 327680, 1, 917539, 327680, 2, 720922, 196608, 1, 786458, 196608, 2, 786459, 262144, 2, 720923, 262144, 1, 720924, 327680, 1, 786460, 327680, 2, 720936, 196608, 1, 786472, 196608, 2, 720937, 262144, 1, 786473, 262144, 2, 720938, 327680, 1, 786474, 327680, 2, 655405, 196608, 1, 655406, 327680, 1, 720942, 327680, 6, 720941, 196608, 6, 589873, 196608, 1, 655409, 196608, 6, 589874, 327680, 1, 655410, 327680, 6, 524341, 196608, 1, 589877, 196608, 6, 524342, 327680, 1, 589878, 327680, 6, 917525, 196608, 6, 917526, 262144, 6, 917527, 327680, 6, 851994, 196608, 6, 851995, 262144, 6, 851996, 327680, 6, 983073, 196608, 6, 983074, 262144, 6, 983075, 327680, 6, 851968, 262144, 2, 851969, 262144, 2, 851970, 262144, 2, 852008, 196608, 6, 852009, 262144, 6, 852010, 327680, 6, 852058, 196608, 1, 852059, 262144, 1, 852060, 327680, 1, 917594, 196608, 6, 917595, 262144, 6, 917596, 327680, 6, 786528, 983040, 3, 786532, 983040, 3, 524421, 65536, 3, 524422, 131072, 3, 524423, 196608, 3, 524424, 262144, 3, 524425, 327680, 3, 524426, 393216, 3, 458887, 196608, 1, 458889, 327680, 1, 524427, 393216, 3, 458888, 262144, 1, 589957, 196608, 6, 589958, 262144, 6, 589959, 262144, 6, 589960, 262144, 6, 589961, 262144, 6, 589962, 262144, 6, 589963, 262144, 6, 524430, 458752, 3, 524428, 393216, 3, 524429, 393216, 3, 589966, 327680, 6, 589965, 262144, 6, 589964, 262144, 6, 524392, 196608, 1, 589928, 196608, 6, 524393, 262144, 1, 589929, 262144, 6, 524394, 327680, 1, 589930, 327680, 6)
+layer_0/tile_data = PackedInt32Array(851967, 327680, 3, 786431, 327680, 3, 720895, 327680, 3, 655359, 327680, 3, 589823, 327680, 3, 524287, 327680, 3, 458751, 327680, 3, 393215, 327680, 3, 327679, 327680, 3, 262143, 327680, 3, 196607, 327680, 3, 917503, 327680, 3, 983039, 327680, 3, 1048575, 196608, 3, 720904, 196608, 7, 720903, 196608, 7, 720899, 196608, 7, 720896, 65536, 7, 720943, 65536, 7, 720944, 65536, 7, 720953, 65536, 7, 720949, 65536, 7, 655485, 1245184, 18, 852152, 458752, 7, 786585, 196608, 7, 786584, 196608, 7, 786587, 65536, 7, 786639, 655360, 1, 786640, 589824, 5, 786643, 589824, 1, 786644, 655360, 1, 655583, 196608, 7, 786432, 262144, 1, 786433, 262144, 1, 786434, 262144, 1, 786435, 262144, 1, 851971, 262144, 2, 786436, 262144, 1, 851972, 262144, 2, 786437, 262144, 1, 851973, 262144, 2, 786438, 262144, 1, 851974, 262144, 2, 786439, 262144, 1, 851975, 262144, 2, 786440, 262144, 1, 851976, 262144, 2, 786441, 262144, 1, 851977, 262144, 2, 851978, 262144, 2, 917504, 262144, 3, 983040, 262144, 4, 917505, 262144, 3, 983041, 262144, 6, 917506, 262144, 3, 983042, 262144, 6, 917507, 262144, 3, 983043, 262144, 6, 917508, 262144, 3, 983044, 262144, 6, 917509, 262144, 3, 983045, 262144, 6, 917510, 262144, 3, 983046, 262144, 6, 917511, 262144, 3, 983047, 262144, 6, 917512, 262144, 3, 983048, 262144, 6, 917513, 262144, 3, 983049, 262144, 6, 917514, 262144, 3, 983050, 262144, 6, 786443, 327680, 1, 786442, 262144, 1, 851979, 327680, 2, 917515, 327680, 2, 983051, 327680, 6, 786448, 196608, 1, 851984, 196608, 2, 917520, 196608, 2, 786449, 262144, 1, 851985, 262144, 2, 917521, 262144, 3, 786450, 327680, 1, 851986, 327680, 2, 917522, 327680, 2, 983056, 196608, 6, 983057, 262144, 6, 983058, 327680, 6, 786453, 196608, 1, 851989, 196608, 2, 786454, 262144, 1, 851990, 262144, 2, 786455, 327680, 1, 851991, 327680, 2, 852001, 196608, 1, 917537, 196608, 2, 852002, 262144, 1, 917538, 262144, 2, 852003, 327680, 1, 917539, 327680, 2, 720922, 196608, 1, 786458, 196608, 2, 786459, 262144, 2, 720923, 262144, 1, 720924, 327680, 1, 786460, 327680, 2, 720936, 196608, 1, 786472, 196608, 2, 720937, 262144, 1, 786473, 262144, 2, 720938, 327680, 1, 786474, 327680, 2, 655405, 196608, 1, 655406, 327680, 1, 720942, 327680, 6, 720941, 196608, 6, 589873, 196608, 1, 655409, 196608, 6, 589874, 327680, 1, 655410, 327680, 6, 524341, 196608, 1, 589877, 196608, 6, 524342, 327680, 1, 589878, 327680, 6, 917525, 196608, 6, 917526, 262144, 6, 917527, 327680, 6, 851994, 196608, 6, 851995, 262144, 6, 851996, 327680, 6, 983073, 196608, 6, 983074, 262144, 6, 983075, 327680, 6, 851968, 262144, 2, 851969, 262144, 2, 851970, 262144, 2, 852008, 196608, 6, 852009, 262144, 6, 852010, 327680, 6, 852058, 196608, 1, 852059, 262144, 1, 852060, 327680, 1, 917594, 196608, 6, 917595, 262144, 6, 917596, 327680, 6, 786528, 983040, 3, 786532, 983040, 3, 524426, 393216, 3, 524427, 393216, 3, 589959, 262144, 6, 589960, 262144, 6, 589961, 262144, 6, 589962, 262144, 6, 589963, 262144, 6, 524430, 458752, 3, 524428, 393216, 3, 524429, 393216, 3, 589966, 327680, 6, 589965, 262144, 6, 589964, 262144, 6, 524392, 196608, 1, 589928, 196608, 6, 524393, 262144, 1, 589929, 262144, 6, 524394, 327680, 1, 589930, 327680, 6, 524422, 196608, 1, 589958, 196608, 6, 524423, 262144, 1, 524424, 262144, 1, 524425, 262144, 1)
 
 [node name="iceBlocks" type="TileMap" parent="." unique_id=96267755]
 tile_set = ExtResource("7_02rbd")
@@ -187,11 +197,11 @@ texture = ExtResource("11_l878w")
 
 [node name="Door" type="Sprite2D" parent="PropsFront" unique_id=652141502]
 position = Vector2(2274, 113)
-texture = ExtResource("12_05ouo")
+texture = ExtResource("11_e80vf")
 
 [node name="PlacaDicas" type="Sprite2D" parent="PropsFront" unique_id=434382312]
-position = Vector2(88.00001, 142)
-scale = Vector2(0.0809949, 0.08075772)
+position = Vector2(105.42092, 148.65228)
+scale = Vector2(0.12938632, 0.109493315)
 texture = ExtResource("13_5awpx")
 
 [node name="Sign3" type="Sprite2D" parent="PropsFront" unique_id=41005282]
@@ -227,10 +237,10 @@ position = Vector2(2648, 208)
 position = Vector2(2792, 136)
 
 [node name="Noz14" parent="Pickups" unique_id=1857496077 instance=ExtResource("13_q3fdg")]
-position = Vector2(2760, 136)
+position = Vector2(763, 122)
 
 [node name="Noz15" parent="Pickups" unique_id=1612581200 instance=ExtResource("13_q3fdg")]
-position = Vector2(2776, 136)
+position = Vector2(828, 102)
 
 [node name="Noz16" parent="Pickups" unique_id=1669405275 instance=ExtResource("13_q3fdg")]
 position = Vector2(3312, 160)
@@ -241,23 +251,16 @@ position = Vector2(3384, 160)
 [node name="Noz18" parent="Pickups" unique_id=1397711251 instance=ExtResource("13_q3fdg")]
 position = Vector2(3352, 136)
 
-[node name="Noz10" parent="Pickups" unique_id=776941035 instance=ExtResource("13_q3fdg")]
+[node name="Noz10" parent="Pickups" unique_id=1621738529 instance=ExtResource("13_q3fdg")]
 position = Vector2(1271, 26)
 
-[node name="Noz19" parent="Pickups" unique_id=1473101217 instance=ExtResource("13_q3fdg")]
-position = Vector2(2170, 99)
-
 [node name="Noz20" parent="Pickups" unique_id=511695098 instance=ExtResource("13_q3fdg")]
-position = Vector2(2185, 99)
-
-[node name="Noz21" parent="Pickups" unique_id=1330617359 instance=ExtResource("13_q3fdg")]
-position = Vector2(2199, 99)
+position = Vector2(1863, 103)
 
 [node name="Player" parent="." unique_id=1018258903 instance=ExtResource("14_u34an")]
 position = Vector2(62, 180)
 floor_max_angle = 0.80285144
 floor_snap_length = 16.0
-municao_inicial = 0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2070818320]
 limit_left = 0
@@ -287,63 +290,115 @@ script = ExtResource("16_qmkqq")
 position = Vector2(2293, 116)
 shape = SubResource("RectangleShape2D_oe8m4")
 
-[node name="BreakableBlock" type="StaticBody2D" parent="." unique_id=1051536551 groups=["breakable"]]
-position = Vector2(-1, 0)
+[node name="BreakableBlockPedraTutorial2" type="StaticBody2D" parent="." unique_id=333517084 groups=["breakable"]]
+script = ExtResource("18_xlm64")
+meio_quebrada_texture = ExtResource("19_rmj87")
+quebrada_texture = ExtResource("19_e80vf")
 
-[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock" unique_id=1833885633]
-position = Vector2(649.5, 167)
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlockPedraTutorial2" unique_id=996343332]
+position = Vector2(984, 121)
+texture = ExtResource("20_02rbd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BreakableBlockPedraTutorial2" unique_id=1733243059]
+position = Vector2(984, 121)
+shape = SubResource("RectangleShape2D_q3fdg")
+
+[node name="BreakableBlock6" type="StaticBody2D" parent="." unique_id=1216027712 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
+
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock6" unique_id=717770606]
+position = Vector2(1608, 183)
 scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("17_uenjg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock" unique_id=572750277]
-position = Vector2(649.4999, 167)
-shape = SubResource("RectangleShape2D_5awpx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock6" unique_id=1538820097]
+position = Vector2(1608, 183)
+shape = SubResource("RectangleShape2D_u34an")
 
-[node name="BreakableBlock2" type="StaticBody2D" parent="." unique_id=310266531 groups=["breakable"]]
-position = Vector2(-1, -18)
+[node name="BreakableBlock6" type="StaticBody2D" parent="BreakableBlock6" unique_id=412081681 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
 
-[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock2" unique_id=1677678579]
-position = Vector2(649.5, 167)
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock6/BreakableBlock6" unique_id=902532743]
+position = Vector2(648, 168)
 scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("17_uenjg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock2" unique_id=2114068650]
-position = Vector2(649.4999, 167)
-shape = SubResource("RectangleShape2D_5awpx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock6/BreakableBlock6" unique_id=323266270]
+position = Vector2(648, 167)
+shape = SubResource("RectangleShape2D_u34an")
 
-[node name="BreakableBlock3" type="StaticBody2D" parent="." unique_id=1235302682 groups=["breakable"]]
+[node name="BreakableBlock7" type="StaticBody2D" parent="." unique_id=158379005 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
 
-[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock3" unique_id=284726563]
-position = Vector2(1271.5, 120)
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock7" unique_id=1944167031]
+position = Vector2(648.00006, 150)
 scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("17_uenjg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock3" unique_id=1820986931]
-position = Vector2(1271.4999, 120)
-shape = SubResource("RectangleShape2D_5awpx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock7" unique_id=904559606]
+position = Vector2(648, 150)
+shape = SubResource("RectangleShape2D_u34an")
 
-[node name="BreakableBlock4" type="StaticBody2D" parent="." unique_id=831192712 groups=["breakable"]]
-position = Vector2(47, -4)
+[node name="BreakableBlock8" type="StaticBody2D" parent="." unique_id=834581062 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
 
-[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock4" unique_id=1115258092]
-position = Vector2(1271.5, 102)
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock8" unique_id=1490925431]
+position = Vector2(1304, 119)
 scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("17_uenjg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock4" unique_id=503324791]
-position = Vector2(1271.4999, 102)
-shape = SubResource("RectangleShape2D_5awpx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock8" unique_id=1704394400]
+position = Vector2(1304, 119)
+shape = SubResource("RectangleShape2D_u34an")
 
-[node name="BreakableBlock5" type="StaticBody2D" parent="." unique_id=852198665 groups=["breakable"]]
-position = Vector2(337, 82)
+[node name="BreakableBlock6" type="StaticBody2D" parent="BreakableBlock8" unique_id=2139234230 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
 
-[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock5" unique_id=1744356821]
-position = Vector2(1271.5, 102)
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock8/BreakableBlock6" unique_id=1059801552]
+position = Vector2(648, 168)
 scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("17_uenjg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock5" unique_id=1691393651]
-position = Vector2(1271.4999, 102)
-shape = SubResource("RectangleShape2D_5awpx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock8/BreakableBlock6" unique_id=170489818]
+position = Vector2(648, 167)
+shape = SubResource("RectangleShape2D_u34an")
+
+[node name="BreakableBlock9" type="StaticBody2D" parent="." unique_id=1680278245 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
+
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock9" unique_id=26532915]
+position = Vector2(1267, 85)
+scale = Vector2(0.53125, 0.5625)
+texture = ExtResource("17_uenjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock9" unique_id=1531169950]
+position = Vector2(1267, 85)
+shape = SubResource("RectangleShape2D_u34an")
+
+[node name="BreakableBlock6" type="StaticBody2D" parent="BreakableBlock9" unique_id=1128502031 groups=["breakable"]]
+script = ExtResource("21_3t73y")
+meio_quebrada_texture = ExtResource("22_l878w")
+quebrada_texture = ExtResource("23_05ouo")
+
+[node name="Sprite2D" type="Sprite2D" parent="BreakableBlock9/BreakableBlock6" unique_id=1946153709]
+position = Vector2(648, 168)
+scale = Vector2(0.53125, 0.5625)
+texture = ExtResource("17_uenjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock9/BreakableBlock6" unique_id=1316335807]
+position = Vector2(648, 167)
+shape = SubResource("RectangleShape2D_u34an")
 
 [connection signal="body_entered" from="LinhaDeChegada" to="LinhaDeChegada" method="_on_body_entered"]

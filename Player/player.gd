@@ -2,9 +2,10 @@ extends CharacterBody2D
 
 @export var torpedo_scene: PackedScene
 @onready var aim_line = $AimLine
+@onready var weapon_marker = $WeaponMarker
 
 # --- MUNICAO (TIROS) ---
-@export var municao_inicial: int = 5  # Tiros com que o player comeca a fase
+@export var municao_inicial: int = 0  # Tiros com que o player comeca a fase
 var municao: int
 var hud_label: Label
 
@@ -155,12 +156,32 @@ func _is_on_ice():
 # --- TORPEDO ---
 
 func _process(_delta):
-	var direction = (get_global_mouse_position() - global_position).normalized()
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		aim_line.visible = true
-		aim_line.points = [Vector2.ZERO, direction * 100]
+		update_parabolic_aim()
 	else:
 		aim_line.visible = false
+		
+func update_parabolic_aim():
+	var start_pos = weapon_marker.global_position
+	var direction = (get_global_mouse_position() - start_pos).normalized()
+
+	var speed = 300.0
+	var gravity_force = 500.0
+
+	aim_line.global_position = start_pos
+	aim_line.clear_points()
+
+	var velocity = direction * speed
+
+	var time_step = 0.05
+	var points_count = 8
+
+	for i in range(points_count):
+		var t = i * time_step
+		var point = velocity * t
+		point.y += 0.5 * gravity_force * t * t
+		aim_line.add_point(point)
 
 func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_W:
@@ -168,21 +189,28 @@ func _input(event):
 			velocity.y = JUMP_VELOCITY
 			coyote_timer = 0.0
 	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			shoot_torpedo()
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+				shoot_torpedo()
 
 func shoot_torpedo():
 	if torpedo_scene == null:
 		return
-	# Sem municao, nao atira.
+
 	if municao <= 0:
 		return
+
 	municao -= 1
 	_atualizar_hud()
+
 	var torpedo = torpedo_scene.instantiate()
 	get_parent().add_child(torpedo)
-	torpedo.global_position = global_position
-	torpedo.direction = (get_global_mouse_position() - global_position).normalized()
+
+	var start_pos = weapon_marker.global_position
+	var direction = (get_global_mouse_position() - start_pos).normalized()
+
+	torpedo.global_position = start_pos
+	torpedo.shoot((get_global_mouse_position() - start_pos).normalized())
 
 # --- MUNICAO / NOZES ---
 
@@ -208,7 +236,7 @@ func _criar_hud():
 	# Icone da noz (usa o primeiro quadro da spritesheet).
 	var icone := TextureRect.new()
 	var noz_tex := AtlasTexture.new()
-	noz_tex.atlas = load("res://Pickups/Noz/noz.png")
+	noz_tex.atlas = load("res://Design/Noz/noz.png")
 	noz_tex.region = Rect2(0, 0, 227, 219)
 	icone.texture = noz_tex
 	icone.custom_minimum_size = Vector2(14, 14)
@@ -218,6 +246,8 @@ func _criar_hud():
 
 	hud_label = Label.new()
 	hud_label.add_theme_font_size_override("font_size", 12)
+	#cor da pontuação
+	hud_label.add_theme_color_override("font_color", Color.BLACK)
 	hud_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	caixa.add_child(hud_label)
 

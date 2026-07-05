@@ -1,8 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://dgp60fa4r1vdi"]
 
 [ext_resource type="Texture2D" uid="uid://dq6iatwfyc6lt" path="res://World/Terrain (16 x 16).png" id="1_5coo3"]
-[ext_resource type="Texture2D" uid="uid://b3soxx15v5sw6" path="res://World/Blocks (16 x 16).png" id="2_lg3qr"]
+[ext_resource type="Texture2D" uid="uid://cbxyybrjolv3e" path="res://World/Blocks (16x16).png" id="2_lg3qr"]
 [ext_resource type="Texture2D" uid="uid://thrwp1163dv6" path="res://World/tileset.png" id="3_uye1t"]
+[ext_resource type="Texture2D" uid="uid://7bylyjiocar8" path="res://World/Blocks (16 x 16)1.png" id="4_efrjf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktx0s"]
 texture = ExtResource("1_5coo3")
@@ -448,8 +449,28 @@ texture = ExtResource("3_uye1t")
 14:21/0 = 0
 15:21/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gja4h"]
+texture = ExtResource("4_efrjf")
+1:0/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ktx0s")
 sources/1 = SubResource("TileSetAtlasSource_uye1t")
 sources/2 = SubResource("TileSetAtlasSource_efrjf")
+sources/4 = SubResource("TileSetAtlasSource_gja4h")

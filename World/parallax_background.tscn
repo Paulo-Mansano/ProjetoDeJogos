@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcsnyw4t6pnw2"]
 
-[ext_resource type="Texture2D" uid="uid://d3inn0asxct2u" path="res://World/Background/back.png" id="1_eh0a4"]
-[ext_resource type="Texture2D" uid="uid://bfy6bt02nkhhn" path="res://World/Background/middle.png" id="2_f5pj8"]
+[ext_resource type="Texture2D" uid="uid://d3inn0asxct2u" path="res://Desing/Background/back.png" id="1_eh0a4"]
+[ext_resource type="Texture2D" uid="uid://bfy6bt02nkhhn" path="res://Desing/Background/middle.png" id="2_f5pj8"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" unique_id=18405809]
 
