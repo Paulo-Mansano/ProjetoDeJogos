@@ -17,6 +17,7 @@ const FASES := [
 	{ "nome": "Tutorial", "cena": "res://World/world.tscn" },
 	{ "nome": "Fase 1", "cena": "res://World/world_fase1.tscn" },
 	{ "nome": "Fase 2", "cena": "res://World/world_fase2.tscn" },
+	{ "nome": "Fase 3", "cena": "res://World/world_fase3.tscn" },
 ]
 
 const ARQUIVO_PROGRESSO := "user://progresso.save"
