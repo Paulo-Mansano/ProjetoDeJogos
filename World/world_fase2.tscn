@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dboexre7jqqjf"]
 
 [ext_resource type="PackedScene" uid="uid://bcsnyw4t6pnw2" path="res://World/parallax_background.tscn" id="1_vxsoh"]
-[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://Design/Background/Sky.png" id="2_uenjg"]
-[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://Design/Background/BG.png" id="3_5awpx"]
-[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://Design/Background/Mid.png" id="4_3hd4o"]
-[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://Design/Background/Snow.png" id="5_xlm64"]
-[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://Design/Background/Foreground.png" id="6_rmj87"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_uenjg"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_5awpx"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_3hd4o"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_xlm64"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_rmj87"]
 [ext_resource type="TileSet" uid="uid://dgp60fa4r1vdi" path="res://World/world-tileset.tres" id="7_02rbd"]
-[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://Design/placas/sign.png" id="8_q6uln"]
-[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://Design/placas/plaquinhadegelo.png" id="9_e80vf"]
+[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="8_q6uln"]
+[ext_resource type="Texture2D" uid="uid://65yblalag8kj" path="res://World/Props/plaquinhadegelo.png" id="9_e80vf"]
 [ext_resource type="Texture2D" uid="uid://cwmmw1b1j47u7" path="res://World/Imagens De Inverno/door_winter.png" id="11_e80vf"]
 [ext_resource type="Texture2D" uid="uid://chn1o3qjvu1wy" path="res://World/Props/shrooms.png" id="11_l878w"]
 [ext_resource type="Texture2D" uid="uid://dn1i1m7stpeot" path="res://World/dica.png" id="13_5awpx"]
-[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Design/Noz/noz.tscn" id="13_q3fdg"]
+[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="13_q3fdg"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="14_u34an"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="15_jv6lx"]
 [ext_resource type="Script" uid="uid://c118jd703iax4" path="res://World/fim.gd" id="16_qmkqq"]
@@ -217,6 +217,15 @@ texture = ExtResource("9_e80vf")
 
 [node name="Noz2" parent="Pickups" unique_id=427377219 instance=ExtResource("13_q3fdg")]
 position = Vector2(226, 130)
+
+[node name="Noz3" parent="Pickups" unique_id=776941035 instance=ExtResource("13_q3fdg")]
+position = Vector2(279, 169)
+
+[node name="Noz5" parent="Pickups" unique_id=1947248450 instance=ExtResource("13_q3fdg")]
+position = Vector2(361, 165)
+
+[node name="Noz6" parent="Pickups" unique_id=1125434834 instance=ExtResource("13_q3fdg")]
+position = Vector2(552, 185)
 
 [node name="Noz4" parent="Pickups" unique_id=1681444027 instance=ExtResource("13_q3fdg")]
 position = Vector2(480, 120)
