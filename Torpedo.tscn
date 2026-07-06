@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b0ctimc0g8hjb" path="res://torpedo.gd" id="1_fas1h"]
 [ext_resource type="Texture2D" uid="uid://bau3uoyt28m2g" path="res://capa.png" id="2_t2myi"]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_in254"]
 radius = 3.0
 
