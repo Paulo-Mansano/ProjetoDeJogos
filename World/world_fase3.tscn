@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cq4i0fl503aqa"]
 
 [ext_resource type="PackedScene" uid="uid://bcsnyw4t6pnw2" path="res://World/parallax_background.tscn" id="1_rxb2g"]
-[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://Design/Background/Sky.png" id="2_1f2vu"]
-[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://Design/Background/BG.png" id="3_3kj8x"]
-[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://Design/Background/Mid.png" id="4_3iyy6"]
-[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://Design/Background/Snow.png" id="5_emwp0"]
-[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://Design/Background/Foreground.png" id="6_oss01"]
+[ext_resource type="Texture2D" uid="uid://b5xydv4ufe340" path="res://World/Background/Sky.png" id="2_1f2vu"]
+[ext_resource type="Texture2D" uid="uid://mn6xldte3f51" path="res://World/Background/BG.png" id="3_3kj8x"]
+[ext_resource type="Texture2D" uid="uid://bhf2fknlqap46" path="res://World/Background/Mid.png" id="4_3iyy6"]
+[ext_resource type="Texture2D" uid="uid://cproulx8s6s0b" path="res://World/Background/Snow.png" id="5_emwp0"]
+[ext_resource type="Texture2D" uid="uid://b4g3fo6fdbkme" path="res://World/Background/Foreground.png" id="6_oss01"]
 [ext_resource type="TileSet" uid="uid://dgp60fa4r1vdi" path="res://World/world-tileset.tres" id="7_xn7xx"]
-[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://Design/placas/sign.png" id="8_s0qp7"]
+[ext_resource type="Texture2D" uid="uid://baiw3llc6vqmf" path="res://World/Props/sign.png" id="8_s0qp7"]
 [ext_resource type="Texture2D" uid="uid://cwmmw1b1j47u7" path="res://World/Imagens De Inverno/door_winter.png" id="10_4chck"]
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="12_hsdmw"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="13_oxnp3"]
@@ -94,6 +94,18 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_3iyy6")
 centered = false
 
+[node name="Middle5" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=5852106]
+position = Vector2(1728, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_3iyy6")
+centered = false
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxBackground/MiddleLayer" unique_id=1021214561]
+position = Vector2(2304, -30)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_3iyy6")
+centered = false
+
 [node name="SnowLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=160420501]
 
 [node name="Snow" type="Sprite2D" parent="ParallaxBackground/SnowLayer" unique_id=1509002630]
@@ -153,6 +165,12 @@ scale = Vector2(0.268, 0.2)
 texture = ExtResource("6_oss01")
 centered = false
 
+[node name="FG6" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=91399319]
+position = Vector2(2566, 80)
+scale = Vector2(0.268, 0.2)
+texture = ExtResource("6_oss01")
+centered = false
+
 [node name="Props" type="Node2D" parent="." unique_id=1523099226]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=2131152504]
@@ -200,14 +218,26 @@ position = Vector2(222, 153)
 [node name="Noz3" parent="Pickups" unique_id=1507548296 instance=ExtResource("12_hsdmw")]
 position = Vector2(281, 175)
 
+[node name="Noz4" parent="Pickups" unique_id=776941035 instance=ExtResource("12_hsdmw")]
+position = Vector2(377, 161)
+
 [node name="Noz6" parent="Pickups" unique_id=1414735456 instance=ExtResource("12_hsdmw")]
 position = Vector2(980, 107)
 
 [node name="Noz12" parent="Pickups" unique_id=327808608 instance=ExtResource("12_hsdmw")]
 position = Vector2(2166, 38)
 
+[node name="Noz14" parent="Pickups" unique_id=1914182205 instance=ExtResource("12_hsdmw")]
+position = Vector2(1610, 115)
+
+[node name="Noz13" parent="Pickups" unique_id=1657393855 instance=ExtResource("12_hsdmw")]
+position = Vector2(1553, 70)
+
 [node name="Noz15" parent="Pickups" unique_id=1612581200 instance=ExtResource("12_hsdmw")]
 position = Vector2(624, 136)
+
+[node name="Noz16" parent="Pickups" unique_id=1776219611 instance=ExtResource("12_hsdmw")]
+position = Vector2(806, 119)
 
 [node name="Player" parent="." unique_id=1018258903 instance=ExtResource("13_oxnp3")]
 position = Vector2(62, 180)

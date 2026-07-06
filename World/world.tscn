@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 [ext_resource type="Texture2D" uid="uid://cwmmw1b1j47u7" path="res://World/Imagens De Inverno/door_winter.png" id="26_yfuda"]
+[ext_resource type="Texture2D" uid="uid://b8fi20rpvhacx" path="res://Placa Pulos.png" id="27_i8dl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brk"]
 size = Vector2(16, 15)
@@ -328,5 +329,10 @@ shape = SubResource("RectangleShape2D_brk")
 [node name="Door" type="Sprite2D" parent="." unique_id=1695021886]
 position = Vector2(2233, 112)
 texture = ExtResource("26_yfuda")
+
+[node name="PlacaPulos" type="Sprite2D" parent="." unique_id=2029472917]
+position = Vector2(1650.9999, 127)
+scale = Vector2(0.03927083, 0.04037043)
+texture = ExtResource("27_i8dl0")
 
 [connection signal="body_entered" from="LinhaDeChegada" to="LinhaDeChegada" method="_on_body_entered"]
