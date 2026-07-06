@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c62j7ahlg2syq" path="res://World/Imagens De Inverno/PEDRARACHADA.png" id="19_xw5lg"]
 [ext_resource type="Texture2D" uid="uid://cx3jt86wns0kg" path="res://World/Imagens De Inverno/PEDRA.png" id="20_0lysu"]
 [ext_resource type="Texture2D" uid="uid://d28g034vvu06b" path="res://World/Imagens De Inverno/PEDRA-DESTRUIDA.png" id="23_x0pyu"]
-[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Design/Noz/noz.tscn" id="24_o7pso"]
+[ext_resource type="PackedScene" uid="uid://c6diiunn70psp" path="res://Pickups/Noz/noz.tscn" id="24_o7pso"]
 [ext_resource type="AudioStream" uid="uid://dinseoiw5ecvq" path="res://Music/walkyandtalky.ogg" id="25_o16sg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brk"]
@@ -273,7 +273,7 @@ scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("19_dg1ng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock" unique_id=630918257]
-position = Vector2(1323, 151)
+position = Vector2(1322, 151)
 shape = SubResource("RectangleShape2D_brk")
 
 [node name="LinhaDeChegada" type="Area2D" parent="." unique_id=1637513592]
@@ -309,7 +309,7 @@ scale = Vector2(0.53125, 0.5625)
 texture = ExtResource("19_dg1ng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock2" unique_id=951978013]
-position = Vector2(1323, 133)
+position = Vector2(1322, 133)
 shape = SubResource("RectangleShape2D_brk")
 
 [connection signal="body_entered" from="LinhaDeChegada" to="LinhaDeChegada" method="_on_body_entered"]
