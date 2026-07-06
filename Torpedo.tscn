@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cxrse4o7w4vam"]
 
 [ext_resource type="Script" uid="uid://b0ctimc0g8hjb" path="res://torpedo.gd" id="1_fas1h"]
-[ext_resource type="Texture2D" uid="uid://bau3uoyt28m2g" path="res://capa.png" id="2_t2myi"]
-
+[ext_resource type="Texture2D" uid="uid://dnlyrkgdp8jmg" path="res://TORPEDO.png" id="2_t2myi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_in254"]
 radius = 3.0
@@ -11,7 +10,7 @@ radius = 3.0
 script = ExtResource("1_fas1h")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=660647403]
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_t2myi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483167469]
