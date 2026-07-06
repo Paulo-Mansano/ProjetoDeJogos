@@ -1,1 +1,10 @@
 .godot/
+
+# Builds exportados (gerar pelo editor, nao commitar)
+*.exe
+*.pck
+*.zip
+
+# Arquivos temporarios do editor Godot
+*.tmp
+*.depren
